@@ -8,7 +8,8 @@ A modern, responsive, and interactive portfolio website showcasing my about, ski
 
 ## 👨‍💻 About
 
-Hi, I'm **Aniket Kumar**,currently pursuing a B.Tech Computer Science Engineering student specializing in **Artificial Intelligence & Machine Learning.
+Hi, My Name is **Aniket Kumar**,I'm currently pursuing a B.Tech Computer Science Engineering with specializing in Artificial Intelligence & Machine Learning.
+My goal is to build intelligent systems that solve real-world problems through AI and software engineering.
 
 This portfolio highlights my:
 
@@ -17,8 +18,6 @@ This portfolio highlights my:
 - 📜 Certifications
 - 💼 Experience
 - 📞 Contact Information
-
-My goal is to build intelligent systems that solve real-world problems through AI and software engineering.
 
 # ✨ Features
 
