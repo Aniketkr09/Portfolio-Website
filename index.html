@@ -689,15 +689,11 @@
 
             </div>
 
-            <form id="contactForm" class="contact-form">
-
-                <input type="text" id="name" placeholder="Your Name" required>
-
-                <input type="email" id="email" placeholder="Your Email" required>
-
-                <input type="text" id="subject" placeholder="Subject" required>
-
-                <textarea id="message" rows="6" placeholder="Write your message..." required></textarea>
+          <form id="contact-form" class="contact-form">
+                <input type="text" name="from_name" placeholder="Your Name" required>
+                <input type="email" name="reply_to" placeholder="Your Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
 
                 <button type="submit">
                     <i class="fa-solid fa-paper-plane"></i>
@@ -705,7 +701,6 @@
                 </button>
 
             </form>
-
             <p id="status"></p>
 
             <!-- ==========================
@@ -820,6 +815,28 @@
 
             </script>
 
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+            <script>
+                emailjs.init({ publicKey: "SIJreWRVxSH_mqI7c" });
+
+                document.getElementById("contact-form").addEventListener("submit", async function (e) {
+                    e.preventDefault();
+
+                    try {
+                        await emailjs.sendForm(
+                            "service_3sjla37",
+                            "template_112ytzr",
+                            this
+                        );
+
+                        alert("Message sent successfully!");
+                        this.reset();
+                    } catch (err) {
+                        console.error(err);
+                        alert("Failed to send message.");
+                    }
+                });
+            </script>
 
 </body>
 
