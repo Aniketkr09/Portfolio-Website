@@ -3320,49 +3320,6 @@ section {
 
 
 
-/* ================================
-       CUSTOM SCROLLBAR
-================================ */
-
-
-
-::-webkit-scrollbar {
-
-
-    width: 10px;
-
-
-}
-
-
-
-::-webkit-scrollbar-track {
-
-
-    background: #050816;
-
-
-}
-
-
-
-::-webkit-scrollbar-thumb {
-
-
-    background:
-
-        linear-gradient(var(--primary),
-
-            var(--secondary));
-
-
-    border-radius: 20px;
-
-
-}
-
-
-
 
 
 
@@ -3475,573 +3432,264 @@ section {
 
 
 
+/*==========================================
+        RESPONSIVE DESIGN
+==========================================*/
 
+/* ---------- Tablet ---------- */
 
-/* ================================
-       TABLET VIEW
-================================ */
+@media (max-width:1200px) {
 
-
-
-@media(max-width:1200px) {
-
-
-
-    .navbar {
-
-
-        width: 95%;
-
-
-    }
-
-
-
-    .hero {
-
-
-        width: 95%;
-
-
-    }
-
-
-
+    .navbar,
+    .hero,
     section {
-
-
         width: 95%;
-
-
     }
-
-
 
     .hero-content h1 {
-
-
         font-size: 60px;
-
-
     }
-
-
 
 }
 
 
+/* ---------- Mobile ---------- */
 
-
-
-/* ================================
-       MOBILE VIEW
-================================ */
-
-
-
-@media(max-width:600px) {
-
-
+@media (max-width:900px) {
 
     body {
-
-
         overflow-x: hidden;
-
-
     }
-
-
-
 
     .navbar {
-
-
-        border-radius: 20px;
-
-
-        padding: 15px;
-
-
+        padding: 18px 6%;
+        border-radius: 18px;
     }
-
-
 
     .logo a {
-
-
         font-size: 24px;
-
-
     }
 
-
-
-    /* hide desktop menu */
-
-
-    .nav-links {
-
-
-        display: none;
-
-
-    }
-
-
-
-
-    .hero {
-
-
-        padding-top: 120px;
-
-
-        text-align: center;
-
-
-    }
-
-
-
-    .hero-image img {
-
-
-        width: 220px;
-
-
-        height: 220px;
-
-
-    }
-
-
-
-    .hero-tag {
-
-
-        font-size: 13px;
-
-
-    }
-
-
-
-    .hero-content h3 {
-
-
-        font-size: 20px;
-
-
-    }
-
-
-
-    .hero-content h1 {
-
-
-        font-size: 42px;
-
-
-    }
-
-
-
-    .hero-content h2 {
-
-
-        font-size: 24px;
-
-
-    }
-
-
-
-    .hero-description {
-
-
-        font-size: 15px;
-
-
-    }
-
-
-
-    .hero-buttons {
-
-
-        flex-direction: column;
-
-
-        align-items: center;
-
-
-    }
-
-
-
-    .btn {
-
-
-        width: 220px;
-
-
-        justify-content: center;
-
-
-    }
-
-
-
-
-
-    .social-links {
-
-
-        gap: 12px;
-
-
-    }
-
-
-
-    .social {
-
-
-        width: 45px;
-
-
-        height: 45px;
-
-
-        font-size: 18px;
-
-
-    }
-
-
-
-
-
-    /* sections */
-
-
-    section {
-
-
-        padding: 70px 0;
-
-
-    }
-
-
-
-    .section-header h2 {
-
-
-        font-size: 32px;
-
-
-    }
-
-
-
-    .section-header p {
-
-
-        font-size: 15px;
-
-
-    }
-
-
-
-
-
-
-    .about-content {
-
-
-        padding: 25px;
-
-
-    }
-
-
-
-    .about-content h3 {
-
-
-        font-size: 28px;
-
-
-    }
-
-
-
-
-    .highlight-box {
-
-
-        padding: 25px;
-
-
-    }
-
-
-
-
-
-    .skill-category {
-
-
-        padding: 25px;
-
-
-    }
-
-
-
-
-    .project-card img {
-
-
-        height: 200px;
-
-
-    }
-
-
-
-    .project-content {
-
-
-        padding: 25px;
-
-
-    }
-
-
-
-    .project-content h3 {
-
-
-        font-size: 23px;
-
-
-    }
-
-
-
-
-
-
-    .timeline-content {
-
-
-        padding: 25px;
-
-
-    }
-
-
-
-    .timeline-content h3 {
-
-
-        font-size: 20px;
-
-
-    }
-
-
-
-
-
-    .contact-box {
-
-
-        flex-direction: column;
-
-
-        text-align: center;
-
-
-    }
-
-
-
-    .contact-form {
-
-
-        padding: 20px;
-
-
-    }
-
-
-
-
-
-    .footer-container h2 {
-
-
-        font-size: 28px;
-
-
-    }
-
-
-}
-
-
-
-
-
-
-
-/* ================================
-     VERY SMALL DEVICES
-================================ */
-
-
-@media(max-width:380px) {
-
-
-
-    .hero-content h1 {
-
-
-        font-size: 35px;
-
-
-    }
-
-
-
-    .hero-image img {
-
-
-        width: 190px;
-
-
-        height: 190px;
-
-
-    }
-
-
-
-    .btn {
-
-
-        width: 190px;
-
-
-    }
-
-
-
-}
-
-/* ==========================
-      MOBILE MENU
-========================== */
-
-.menu-toggle {
-
-    display: none;
-
-    flex-direction: column;
-
-    justify-content: center;
-
-    gap: 6px;
-
-    cursor: pointer;
-
-    z-index: 1001;
-
-}
-
-.menu-toggle span {
-
-    width: 30px;
-
-    height: 3px;
-
-    background: #fff;
-
-    border-radius: 5px;
-
-    transition: .4s;
-
-}
-
-/* Animation */
-
-.menu-toggle.active span:nth-child(1) {
-
-    transform: translateY(9px) rotate(45deg);
-
-}
-
-.menu-toggle.active span:nth-child(2) {
-
-    opacity: 0;
-
-}
-
-.menu-toggle.active span:nth-child(3) {
-
-    transform: translateY(-9px) rotate(-45deg);
-
-}
-
-/* Mobile */
-
-@media(max-width:900px) {
+    /* Hamburger */
 
     .menu-toggle {
-
         display: flex;
-
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        cursor: pointer;
+        z-index: 10001;
     }
 
+    .menu-toggle span {
+        width: 30px;
+        height: 3px;
+        border-radius: 10px;
+        background: #ffffff;
+        transition: .4s ease;
+    }
+
+    /* Animation */
+
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Mobile Navigation */
+
     .nav-links {
-
         position: fixed;
-
-        top: 70px;
-
+        top: 0;
         right: -100%;
+        width: 290px;
+        height: 100vh;
 
-        width: 260px;
-
-        height: calc(100vh - 70px);
-
-        background: #081323;
-
+        display: flex;
         flex-direction: column;
-
-        justify-content: flex-start;
-
+        justify-content: center;
         align-items: center;
+        gap: 35px;
 
-        gap: 30px;
+        background: rgba(5, 8, 22, .97);
+        backdrop-filter: blur(20px);
 
-        padding-top: 50px;
+        transition: right .45s ease;
 
-        transition: .4s;
+        z-index: 9999;
 
-        box-shadow: -5px 0 20px rgba(0, 0, 0, .3);
-
+        box-shadow: -10px 0 40px rgba(0, 0, 0, .35);
     }
 
     .nav-links.active {
-
         right: 0;
-
     }
 
+    .nav-links li {
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: .3s;
+    }
+
+    .nav-links a:hover {
+        color: #7c5cff;
+    }
+
+    /* Hero */
+
+    .hero {
+        padding-top: 120px;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-tag {
+        font-size: 13px;
+    }
+
+    .hero-content h3 {
+        font-size: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-content h2 {
+        font-size: 24px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 220px;
+        justify-content: center;
+    }
+
+    .social-links {
+        gap: 12px;
+    }
+
+    .social {
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+    }
+
+    section {
+        padding: 80px 0;
+    }
+
+    .section-header h2 {
+        font-size: 32px;
+    }
+
+    .section-header p {
+        font-size: 15px;
+    }
+
+    .about-card,
+    .skill-category,
+    .highlight-box,
+    .timeline-content,
+    .project-content,
+    .contact-form {
+        padding: 25px;
+    }
+
+    .project-card img {
+        height: 200px;
+    }
+
+    .contact-box {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-container h2 {
+        font-size: 28px;
+    }
+
+}
+
+
+/* ---------- Small Phones ---------- */
+
+@media (max-width:480px) {
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content h2 {
+        font-size: 22px;
+    }
+
+    .hero-image img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .btn {
+        width: 200px;
+    }
+
+    .nav-links {
+        width: 100%;
+    }
+
+}
+
+
+/* ===============================
+        CUSTOM SCROLLBAR
+================================== */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #070b1e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg,
+            #4f46e5,
+            #7c3aed,
+            #9333ea);
+    border-radius: 20px;
+    border: 2px solid #070b1e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg,
+            #6366f1,
+            #8b5cf6,
+            #a855f7);
 }
