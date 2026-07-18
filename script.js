@@ -151,36 +151,48 @@ document
 
     });
 
+/*==========================================
+        MOBILE NAVIGATION
+==========================================*/
 
-/* ======================
-      MOBILE MENU
-====================== */
+document.addEventListener("DOMContentLoaded", () => {
 
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
 
-if (menuToggle && navLinks) {
+    if (!menuToggle || !navLinks) return;
 
+    // Toggle Mobile Menu
     menuToggle.addEventListener("click", () => {
-
         menuToggle.classList.toggle("active");
-
         navLinks.classList.toggle("active");
-
     });
 
-    // Close menu after clicking a link
-
-    document.querySelectorAll(".nav-links a").forEach(link => {
-
+    // Close Menu When Clicking a Navigation Link
+    document.querySelectorAll("#nav-links a").forEach(link => {
         link.addEventListener("click", () => {
-
             menuToggle.classList.remove("active");
-
             navLinks.classList.remove("active");
-
         });
-
     });
 
-}
+    // Close Menu When Clicking Outside
+    document.addEventListener("click", (e) => {
+        if (
+            !menuToggle.contains(e.target) &&
+            !navLinks.contains(e.target)
+        ) {
+            menuToggle.classList.remove("active");
+            navLinks.classList.remove("active");
+        }
+    });
+
+    // Close Menu When Window is Resized to Desktop
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) {
+            menuToggle.classList.remove("active");
+            navLinks.classList.remove("active");
+        }
+    });
+
+});
