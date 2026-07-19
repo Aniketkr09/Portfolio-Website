@@ -151,48 +151,88 @@ document
 
     });
 
-/*==========================================
-        MOBILE NAVIGATION
-==========================================*/
 
-document.addEventListener("DOMContentLoaded", () => {
+/* ======================
+    MENU ICON
+====================== */
+document.addEventListener("DOMContentLoaded", function () {
 
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
 
-    if (!menuToggle || !navLinks) return;
+    const menuToggle = document.querySelector("#menu-toggle");
+    const navLinks = document.querySelector("#nav-links");
 
-    // Toggle Mobile Menu
-    menuToggle.addEventListener("click", () => {
+
+    // Check elements exist
+
+    if (!menuToggle || !navLinks) {
+
+        console.log("Navbar elements not found");
+
+        return;
+
+    }
+
+
+
+    // Hamburger click
+
+    menuToggle.onclick = function (e) {
+
+        e.stopPropagation();
+
         menuToggle.classList.toggle("active");
+
         navLinks.classList.toggle("active");
-    });
 
-    // Close Menu When Clicking a Navigation Link
-    document.querySelectorAll("#nav-links a").forEach(link => {
-        link.addEventListener("click", () => {
+    };
+
+
+
+
+    // Close after clicking menu item
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+
+        link.onclick = function () {
+
+
             menuToggle.classList.remove("active");
+
             navLinks.classList.remove("active");
-        });
+
+
+        };
+
+
     });
 
-    // Close Menu When Clicking Outside
-    document.addEventListener("click", (e) => {
+
+
+
+    // Click outside close
+
+    document.onclick = function (e) {
+
+
         if (
-            !menuToggle.contains(e.target) &&
-            !navLinks.contains(e.target)
-        ) {
-            menuToggle.classList.remove("active");
-            navLinks.classList.remove("active");
-        }
-    });
 
-    // Close Menu When Window is Resized to Desktop
-    window.addEventListener("resize", () => {
-        if (window.innerWidth > 900) {
+            !navLinks.contains(e.target) &&
+
+            !menuToggle.contains(e.target)
+
+        ) {
+
             menuToggle.classList.remove("active");
+
             navLinks.classList.remove("active");
+
+
         }
-    });
+
+
+    };
+
+
 
 });
